@@ -67,15 +67,15 @@ describe('`const` is like `let` plus read-only. ', () => {
   describe('complex types are NOT fully read-only', () => {
 
     it('arrays is not fully read-only', () => {
-      const arr = [42, 23];
+      let arr = [42, 23];
 
-      //expect(arr[0]).toBe(0);
+      expect(arr[0]).toBe(0);
     });
 
     it('objects are not fully read-only', () => {
       const obj = {x: 1};
 
-      //expect(obj.x).toBe(2);
+      expect(obj.x).toBe(2);
     });
 
   });
@@ -144,8 +144,8 @@ describe('a template string, is wrapped in ` (backticks) instead of \' or ". ', 
 
   describe('by default, behaves like a normal string', function() {
     it('just surrounded by backticks', function() {
-      /*let str = ??????*/
-      //expect(str).toEqual('like a string');
+     let str = 'like a string'
+      expect(str).toEqual('like a string');
     });
 
   });
@@ -600,3 +600,6 @@ describe('class creation', () => {
   });
 
 });
+
+
+
